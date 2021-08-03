@@ -384,8 +384,9 @@ RETURN:
         if nameSave is not None:
             pylab.savefig(nameSave, dpi=80)
         else:
+            fig = plt.gcf()
             plt.show()
 
         result.append(ax)
 
-        return result
+        return result, fig
